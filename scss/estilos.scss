@@ -1,0 +1,423 @@
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1D202B;
+    color: #fff;
+    font-family: 'Roboto' , sans-serif;
+}
+
+
+/*SECCION TORNEOS */
+    
+    .contenedor__t {
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px 0;
+    
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 20px;
+
+        .contenedor__torneos{
+            display: grid;
+            grid-template-columns: repeat(2fr, 2fr);
+            gap: 25px;
+
+            .torneo{
+                border-radius: 10px;
+                min-height: 200px;
+                font-weight: bold;
+                padding: 20px;
+                position: relative;
+                overflow: hidden;
+                background-size: cover;
+                background-position: center center;
+
+                .textos{
+                    height: 100%;
+
+                }
+            }
+        }
+        
+        .banner__torneos{
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .boton{
+                background: #FFD600;
+                display: block;
+                width: 100%;
+                font-weight: bold;
+                font-size: 14px;
+                text-align: center;
+                padding: 10px;
+                border: none;
+                border-radius: 100px;
+                font-family: 'Roboto', sans-serif;
+                cursor: pointer;
+            }
+        }
+}    
+    
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* FIN SECCION TORNEOS */
+
+
+
+/*FOOTER / PIE DE PAGINA */
+
+.pie-pagina {
+    width: 100%;
+    background-color: #0a141d;
+
+    .grupo-1{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap:50px;
+        padding: 45px 0px;
+
+            .box{
+
+                figure{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+
+                h2{
+                color: #fff;
+                margin-bottom: 25px;
+                font-size: 20px;
+                }
+
+                img{
+                    width: 250px;
+                }
+
+                p{
+                    color: #efefef;
+                    margin-bottom: 10px;
+                }
+
+                .red-social a{
+                    display: inline-block;
+                    text-decoration: none;
+                    width: 45px;
+                    height: 45px;
+                    line-height: 45px;
+                    color: #fff;
+                    margin-right: 10px;
+                    background-color: #0d2033;
+                    text-align: center;
+                    transition: all 300ms ease;
+                }
+                
+                .red-social a:hover{
+                    color: aqua;
+                }
+
+            }
+        
+        }
+    
+    .grupo-2{
+        background-color: #0a1a2a;
+        padding: 15px 10px;
+        text-align: center;
+        color: #fff;
+
+        small{
+            font-size: 15px;
+        }
+    }    
+
+}
+
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
+
+/* FIN FOOTER / PIE DE PAGINA*/
+
+/*  CONTENEDOR NAV + CONTENIDO */
+.header{
+    grid-area: header;
+    padding: 20px;
+    background: #0a1a2a;
+    box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+
+    .logo{
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+
+        .iniciales-logo{
+            padding: 5px;
+            border: 2px solid #000;
+            display: inline-block;
+            font-size: 16px;
+            margin-bottom: 15px;
+
+        }
+
+        h1{
+            font-size: 30px;
+        }
+    }
+
+    .menu {
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        display: flex;
+        justify-content: space-between;
+
+        a{
+            padding: 10px;
+            color: rgb(255, 255, 255);
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 400;
+            width: 100%;
+            text-align: center;
+            transition: 0.2s ease all;
+            font-size: 16px;
+
+        }
+
+        a:hover {
+            background: rgb(38, 102, 145);
+            color: rgb(243, 236, 236);
+        }
+    }
+    
+}
+
+
+
+/* ----  NAV BAR / ARTICULOS / SECCIONES  -----*/
+
+.contenedor{
+    width: 90%;
+	max-width: 1200px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas:
+		'header			header   	header'
+		'destacado		destacado 	destacado'
+		'contenido		contenido 	aside';
+        /* --- HEADER  / NAV BAR---*/
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        a{
+            text-decoration: none;
+        }
+
+        /* ---- FIN HEADER / NAVBAR -----*/
+
+        /* ARTICULO DESTACADO / PRINCIPAL */
+
+        .articulo.destacado{
+            grid-area: destacado;
+            color: rgb(255, 255, 255);
+            background-color: #0a1a2a;
+            box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+        
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+
+                .btn-link{
+                    color: #fff;
+                    cursor: pointer;
+                    display: inline-block;
+                    padding: 0.625em; 
+                    background-color: #262626;
+                    font-size: 1em; 
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    align-self: flex-end;
+                }
+
+                .btn-link:hover {
+                    background: #000;
+                    text-decoration: none;
+                }
+
+                .titulo{
+                
+                    a{
+                        color: #fff;
+                    }
+                }
+
+                .titulo::after {
+
+                    content: '';
+                    margin: 0.625em 0; 
+                    display: block;
+                    background-color: #868686;
+                    width: 6em; 
+                    height: 1px;
+                }
+
+            .contenedor-thumbnail{
+                min-height: 100%;
+                width: 100%;
+                a{
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%; 
+                }
+            }
+
+        }
+        /* ---- FIN ARTICULO PRINCIPAL / DESTACAD ------*/
+
+        /*  ---- ARTICULOS VARIOS ---- */
+        .contenido{
+            grid-area: contenido;
+            display: grid;
+            grid-template-columns: 1;
+            grid-gap: 20px; 
+
+            .articulo {
+                display: flex;
+                background: #0a1a2a;
+                box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+
+                .contenedor-texto {
+                    padding: 20px;
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+
+                .contenedor-thumbnail {
+                    width: 50%;
+                }
+
+                .titulo{
+                    margin-bottom: 10px;
+                    font-size: 25px;
+                    a{
+                        font-weight: 400;
+                        color: #000;
+                    }
+                }
+
+                .fecha {
+                    font-size: 16px;
+                    color: #868b8d;
+                    margin-bottom: 10px;
+                }
+
+                .extracto {
+                    font-size: 20px; 
+                    line-height: 25px; 
+                    font-weight: 300;
+                    margin-bottom: 20px; 
+                    color: #868b8d;
+                }
+            }
+        }
+
+        /* ---- FIN ARTICULOS VARIOS -----*/
+
+
+
+
+        /*---------- SIDEBAR ----------*/
+
+        .sidebar {
+            padding: 5em 25px; 
+            text-align: center;
+            min-height: 100px; 
+            grid-area: aside;
+            background: #000;
+            color: #868b8d;
+            box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+                .acerca-de{
+
+                    img{
+                        border-radius: 100%;
+                        height: 10em; 
+                        width: 10em; 
+                        margin-bottom: 25px; 
+                    }
+                }
+
+
+            .bio{
+                margin-bottom: 25px; 
+                font-size: 20px; 
+                line-height: 25px; 
+            }
+
+            .menu{
+                width: 100%;
+                display: inline-block;
+                background: #ccc;
+                a{
+                    padding: 25px; 
+                    color: #fff;
+                    background-color: #000;
+                    display: block;
+                    font-size: 1em;
+                    text-transform: uppercase;
+                }
+                a:hover{
+                    background: #262626;
+                }
+            }
+        }
+}
+
+/*me costo demasiado el nesting con este xd*/
+.articulo .contenedor-texto{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
